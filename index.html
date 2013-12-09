@@ -1,0 +1,23 @@
+{% if index %}
+	{% for row2 in index_table %}
+		<div class="row">
+		
+			<div class="col-md-8">
+					<h5>{{row2.page}}</h5>
+			</div>
+			<div class="col-md-4">
+				<a class="btn btn-small btn-default" href="{{row2.view}}">View</a>
+			
+			{% if logged_in %}
+				
+					<a class="btn btn-small btn-default" href="{{row2.edit}}">Edit</a>
+				
+			{% endif %}
+			
+				<a class="btn btn-small btn-default" href="{{row2.history}}">History</a>
+			</div>
+		</div>
+	{% endfor %}
+{% endif %}
+
+

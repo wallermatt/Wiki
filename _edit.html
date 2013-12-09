@@ -1,0 +1,10 @@
+  
+ {% if edit %}
+ <h4>Edit</h4>
+ <form method="post" role="form">
+	 <h5>{{edit_page}}</h5>
+      <textarea class="form-control" rows="10" name="content">{{content}}</textarea>
+      <br>
+	  <button class="btn btn-default" type="submit">Save</button>
+    </form>
+{% endif %}

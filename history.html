@@ -1,0 +1,22 @@
+{% if history %}
+	{% for hrow in history_table %}
+	<div class="row">
+	<div class="col-md-1">
+		{{hrow.page}}
+	</div>
+	<div class="col-md-2">
+		{{hrow.created}}
+	</div>
+	<div class="col-md-5">
+		{{hrow.content}}
+	</div>
+	<div class="col-md-4">
+		<a class="btn btn-small btn-default" href="{{hrow.view}}">View</a>
+	{% if logged_in %}
+		<a class="btn btn-small btn-default" href="{{hrow.edit}}">Edit</a>
+	{% endif %}
+	</div>
+		<br>
+	</div>
+	{% endfor %}
+{% endif %}

@@ -1,0 +1,7 @@
+{% if wikipage %}
+	<h3>{{page}}</h3>
+	{% if history %}
+		<h4>Last modified: {{created}}</h4>
+	{% endif %}
+	{{content}}
+{% endif %}
